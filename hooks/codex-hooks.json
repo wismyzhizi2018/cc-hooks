@@ -1,0 +1,43 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.codex/hooks/cc-codex-hook.js\"",
+            "commandWindows": "& \"node\" \"$env:USERPROFILE/.codex/hooks/cc-codex-hook.js\"",
+            "timeout": 30,
+            "statusMessage": "Checking repository safety policy"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.codex/hooks/cc-codex-hook.js\"",
+            "commandWindows": "& \"node\" \"$env:USERPROFILE/.codex/hooks/cc-codex-hook.js\"",
+            "timeout": 30,
+            "statusMessage": "Checking approval policy"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/.codex/hooks/cc-codex-hook.js\"",
+            "commandWindows": "& \"node\" \"$env:USERPROFILE/.codex/hooks/cc-codex-hook.js\"",
+            "timeout": 30,
+            "statusMessage": "Checking git commit metadata"
+          }
+        ]
+      }
+    ]
+  }
+}
